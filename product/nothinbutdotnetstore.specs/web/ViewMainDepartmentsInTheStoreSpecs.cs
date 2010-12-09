@@ -22,7 +22,7 @@ namespace nothinbutdotnetstore.specs.web
             Establish c = () =>
             {
                 request = an<Request>();
-                application_command = the_dependency<ViewRenderer>();
+                view_renderer = the_dependency<ViewRenderer>();
             };
 
             Because b = () =>
@@ -33,7 +33,6 @@ namespace nothinbutdotnetstore.specs.web
 
             static Request request;
             static ViewRenderer view_renderer;
-            private static ApplicationCommand application_command;
         }
     }
 }
