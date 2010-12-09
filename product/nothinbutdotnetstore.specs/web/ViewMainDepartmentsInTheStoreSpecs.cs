@@ -21,20 +21,19 @@ namespace nothinbutdotnetstore.specs.web
 
             Establish c = () =>
             {
-                resquest = an<Request>();
-                response = an<Response>();
+                request = an<Request>();
                 application_command = the_dependency<ViewRenderer>();
             };
 
             Because b = () =>
                 sut.process(request);
 
-            It should_delegate_the_view_rendering_to_the_view_render = () =>
+            It should_delegate_the_view_rendering_to_the_view_renderer = () =>
                 view_renderer.received(x => x.Render());
 
-            static Response response;
             static Request request;
-            static ViewRenderer view_renderer;  
+            static ViewRenderer view_renderer;
+            private static ApplicationCommand application_command;
         }
     }
 }
